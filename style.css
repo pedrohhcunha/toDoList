@@ -1,0 +1,100 @@
+:root{
+    --primary: #a2cdff;
+    --secundary: #192b41;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url('img/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    width: 30vw;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.568);
+}
+.content h1{
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+.content .area-input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--secundary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.content .area-input input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none;
+    padding-left: 10px;
+    outline: none;
+    color: #a2cdff;
+    font-size: 16px;
+}
+.content .area-input button{
+    height: 100%;
+    background: rgb(7, 192, 16);
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 900;
+    transition: .3s;
+}
+.content .list{
+    width: 100%;
+}
+.content .list .tarefa{
+    width: 100%;
+    height: 45px;
+    color: var(--primary);
+    background: var(--secundary);
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.content .list .tarefa h2{
+    font-size: 16px;
+}
+.content .list .tarefa button{
+    height: 100%;
+    border: none;
+    background: #a2cdff21;
+    padding: 0 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover{
+    filter: brightness(0.7);
+}
+@media (max-width: 500px){
+    .content{
+        width: 90vw;
+    }
+}
