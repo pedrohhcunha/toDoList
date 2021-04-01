@@ -3,6 +3,7 @@ const input = document.querySelector('#input')
 const list = document.querySelector('.list')
 var tasks = []
 var removeBtn = []
+let cout = 0
 
 addBtn.addEventListener('click', addTask)
 document.addEventListener('keypress', (e) => {
@@ -19,9 +20,23 @@ function addTask(){
         div.classList.add('tarefa')
         list.appendChild(div)
         tasks.push(div)
+
         var h2 = document.createElement('h2')
         h2.innerText = input.value
+        var h2s = document.querySelectorAll('h2')
+        h2s.forEach(element => {
+            if(element.innerText == input.value || (input.value + " (" + cout + ")") == element.innerText){
+                cout ++
+            }
+        });
+        if(cout <= 0){
+            h2.innerText = input.value
+        } else {
+            h2.innerText = input.value + " (" + cout + ")"
+            cout = 0
+        }
         div.appendChild(h2)
+
         var button = document.createElement('button')
         button.classList.add('done')
         button.innerText = "Mark as Done"

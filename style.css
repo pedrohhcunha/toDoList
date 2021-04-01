@@ -24,6 +24,9 @@ body{
     padding: 10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.568);
+    height: initial;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 .content h1{
     text-transform: uppercase;
@@ -96,5 +99,7 @@ button:hover{
 @media (max-width: 500px){
     .content{
         width: 90vw;
+        height: 90vh;
+        overflow-y: auto;
     }
 }
